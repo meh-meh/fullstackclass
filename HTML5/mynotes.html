@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Note</title>
+    <script>
+        function getNote() {
+            if (localStorage.getItem('note')) {
+                var note = localStorage.getItem('note');
+            } else {
+                var note = 'Edit this note to save in local storage';
+            }
+
+            document.getElementById('note').innerHTML = note;
+        }
+
+        function saveNote() {
+            localStorage.note = this.innerHTML;
+        }
+
+        function clearNote() {
+            localStorage.removeItem('note');
+            getNote();
+        }
+    </script>
+    <style>
+        body {
+            font-family: Tahoma;
+            line-height: 1.6em;
+            background: #f4f4f4;
+        }
+
+        header,
+        footer {
+            text-align: center;
+        }
+
+        #container {
+            width: 400px;
+            margin: 50px auto;
+            background: #FFFFA5;
+            overflow: hidden;
+            padding: 30px;
+        }
+
+        .clear {
+            text-decoration: none;
+            background: #333;
+            color: #fff;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>MyNote</h1>
+    </header>
+
+    <section id="container">
+        <div id="note" contenteditable="true"></div>
+    </section>
+
+    <footer>
+        <div>
+            <a href="#" class="clear">Clear Note</a>
+        </div>
+
+        <p>MyNote &copy; 2018</p>
+    </footer>
+    <script>
+        getNote();
+
+        let noteSection = document.getElementById('note');
+        noteSection.addEventListener('keyup', saveNote);
+
+        let clearLink = document.querySelector('.clear');
+        clearLink.addEventListener('click', clearNote);
+    </script>
+</body>
+
+</html>
