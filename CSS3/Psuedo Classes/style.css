@@ -1,0 +1,39 @@
+a:hover {
+    color: red;
+    font-weight: bold;
+}
+
+a:active {
+    color: green;
+    font-weight: bold;
+}
+
+.myForm input:focus {
+    background: pink;
+    width: 300px;
+}
+
+.myList li:first-child {
+    color: green;
+    font-weight: bolder;
+}
+
+.myList li:last-child {
+    color: red;
+    font-weight: bold;
+}
+
+.myList li:nth-child(3n+3) {
+    color: orangered;
+    font-weight: lighter;
+}
+
+.myList li:nth-child(even) {
+    background: purple;
+    font-weight: 900;
+}
+
+.myList li:nth-child(odd) {
+    background: orange;
+    font-weight: 100;
+}
