@@ -1,0 +1,74 @@
+#rounded1 {
+    background: rgba(255, 0, 0, 0.3);
+    color: white;
+    width: 200px;
+    height: 200px;
+    padding: 30px;
+    border-radius: 25px;
+}
+
+#rounded2 {
+    background: hsl(120, 100%, 75%);
+    color: white;
+    width: 200px;
+    height: 200px;
+    padding: 30px;
+    border-top-left-radius: 11%;
+    border-bottom-right-radius: 11%;
+}
+
+#rounded3 {
+    background: hsla(120, 100%, 50%, 0.3);
+    color: white;
+    width: 200px;
+    height: 200px;
+    padding: 30px;
+    border: 3px black solid;
+    border-radius: 40%;
+}
+
+img {
+    border-radius: 25px;
+}
+
+#border-img {
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url(border.png) 30 round;
+}
+
+#my-bg {
+    background-image: url(img_flwr.gif), url(paper.gif);
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+    padding: 15px 200px 15px 15px;
+    background-size: 100px 100px;
+}
+
+#grad1 {
+    width: 500px;
+    height: 200px;
+    background: blue;
+    background: linear-gradient(blue, black, white);
+}
+
+#grad2 {
+    width: 500px;
+    height: 200px;
+    background: blue;
+    background: linear-gradient(to right, blue, black);
+}
+
+#grad3 {
+    width: 500px;
+    height: 200px;
+    background: blue;
+    background: linear-gradient(to bottom right, blue, black);
+}
+
+#grad4 {
+    width: 500px;
+    height: 200px;
+    background: blue;
+    background: repeating-radial-gradient(circle, white 5%, blue 15%, black 60%);
+}
